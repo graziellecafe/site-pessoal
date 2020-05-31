@@ -1,0 +1,436 @@
+/* reset do css */
+* { 
+  margin: 0; /*margem nula, iniciar com eles zerados*/
+  padding: 0; /*borda interna*/
+  box-sizing: border-box; /* vai dizer para o navegador começa a contar o tamanho do elemento a partir da borda da caixa*/
+}
+
+/*BODY*/
+body {
+  font-family: 'Montserrat', sans-serif;
+  height:100vh;
+  }
+
+  /* se o tamanho da tela for no minimo 400px, vai carregar esses estilos*/ 
+  @media(min-width: 400px) {
+    body{
+      font-size: 14px; 
+    }
+  }
+
+  @media(min-width: 600px) {
+    body{
+      font-size: 18px; 
+    }
+  }
+  /*FIM BODY*/
+
+
+  /* CABEÇALHO: NOME, CURSO */
+  header {
+    background-image: url('https://i.ibb.co/MDnKBLV/cabecalho-novo.png');
+    background-repeat: no-repeat;
+    /*background-size: 1em;*/
+    /* 1360px 312px;*/
+    display: flex;
+    height:65vh;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+
+  }
+  
+  .menu{
+    background-color: white; /*deixa o fundo branco da parte menu*/
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1; 
+   
+  }
+
+  .menu a{
+  display: block; 
+  padding: 10px 20px;  
+  }
+
+  .menu a:active,
+  .menu a:hover{
+    text-decoration: none; 
+    text-shadow: 0px 0px 30px #f8b00d, 0px 0px 30px #f8b00d, 0px 0px 30px #f8b00d, 0px 0px 30px #f8b00d;
+
+  }
+  
+  .menu li{
+    list-style: none; /*tira o estilo de lista das palavras da classe menu*/
+  }
+  
+  .menu ul{
+    display: flex; 
+    justify-content: space-around;
+  }
+  
+  a{
+    color: black; /*alterar a cor do texto do menu*/
+    text-decoration: none; /*tira o underline do texto*/
+    font-family: 'Alegreya', serif;
+  }
+  
+  a:hover{
+    text-decoration: underline; /*coloca underline quando passamos o mouse por cima*/
+  }
+  
+  /*.descricao{
+    padding-left:650px;
+  }*/
+
+  .site-title{
+    color: black;
+    font-family: 'Dancing Script', cursive;
+    text-align:center;
+    font-size:32px;
+
+  }
+  
+  .site-subtitle{
+    color: #442e29;
+    font-family: 'Alegreya', serif;
+    font-size: 20px;
+    text-align:center;
+  }
+  
+  .site-subtitle-p2{
+    color: #442e29;
+    font-family: 'Alegreya', serif;
+    font-size:18px;
+    text-align:center;
+  }
+
+  .img-sobre{
+    width: 320px;
+    height: 320px;
+  }
+
+  .img-projetos{
+    height: 250px;
+    width: 320px;
+    object-fit: cover;
+    border-radius: 10%;
+    transition: transform 500ms;
+
+  }
+
+  .img-projetos:hover{
+    transform: scale(1.15);
+  }
+
+
+/* ABA SOBRE */ 
+
+ .sobre,
+ .experiencias,
+ .contato,
+ .projetos {
+   padding: 2em; 
+  
+}
+
+@media (min-width:1400px){
+.container {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto; 
+ }
+}
+  .sobre{
+    background-color: white;
+    text-align: center;  
+    background-size: 100vh;
+    min-height: 100vh;
+  }
+
+  .sobre h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 48px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .sobre .grid{
+    float: right;
+    margin-left: 2em;
+  }
+
+  .sobre p{
+    text-indent: 2em;
+    margin-bottom: 1.4em;
+    text-align: justify; 
+  }
+
+  .sobre a{
+    color: #f8b00d;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: underline;
+  }
+
+/* FIM ABA SOBRE */
+
+
+
+/* ABA EXPERIÊNCIAS */ 
+.experiencias{
+  background-color: #f8b00d;
+  padding: 2em; 
+}
+
+.experiencias h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 48px;
+  text-align: center; 
+  margin-top: 1em;
+}
+
+.timeline{
+  position: relative; 
+  margin: 50px auto;
+  padding: 40px 0;
+  width: 1000px; 
+  box-sizing: border-box;
+}
+
+.timeline:before{
+  content: ''; 
+  position: absolute; 
+  left: 50%; 
+  width: 2px; 
+  height: 100%; 
+  background: black;
+}
+
+.timeline ul{
+  margin:0;
+  padding: 0; 
+}
+
+.timeline ul li{
+  list-style: none; 
+  line-height: normal;
+  position: relative; 
+  width: 50%;
+  padding: 20px 40px; 
+  box-sizing: border-box; 
+}
+
+.timeline ul li:nth-child(odd):before{
+  content: ''; 
+  position: absolute; 
+  top: 24px; 
+  right: -6px; 
+  width: 10px; 
+  height: 10px; 
+  background: white; 
+  border-radius: 50%; 
+  box-shadow: 0 0 0 5px #442e29;
+}
+
+.timeline ul li:nth-child(odd){
+  float: left; 
+  text-align: right; 
+  clear: both; 
+}
+
+.timeline ul li:nth-child(even):before{
+  content: ''; 
+  position: absolute; 
+  top: 24px; 
+  left: -5px; 
+  width: 10px; 
+  height: 10px; 
+  background: white; 
+  border-radius: 50%; 
+  box-shadow: 0 0 0 5px #442e29;
+}
+
+.timeline ul li:nth-child(even){
+  float: right; 
+  text-align: left; 
+  clear: both; 
+}
+
+.content{
+  padding-bottom: 20px; 
+}
+
+.timeline ul li h3{
+  margin:0; 
+  padding: 0; 
+  font-weight: 600; 
+  color: whitesmoke;  
+}
+
+.timeline ul li p{
+  margin: 10px 0 0; 
+  padding: 0; 
+}
+
+.timeline ul li .time h4{
+  margin: 0; 
+  padding: 0; 
+  font-size: 16px; 
+}
+
+.timeline ul li:nth-child(odd) .time{
+  position: absolute; 
+  top: 12px; 
+  right: -220px; 
+  margin: 0; 
+  padding: 8px 16px; 
+  background: white; 
+  border-radius: 20px; 
+}
+
+.timeline ul li:nth-child(even) .time{
+  position: absolute; 
+  top: 12px; 
+  left: -220px; 
+  margin: 0; 
+  padding: 8px 16px; 
+  background: white; 
+  border-radius: 20px; 
+}
+
+@media (max-width: 1000px){
+  .timeline{
+    width: 100%; 
+  }
+}
+
+@media (max-width: 767px){
+  .experiencias h2{
+    text-align: center; 
+    font-size: 40px; 
+    padding: 0 20px; 
+  }
+
+  .timeline{
+    width: 100%;
+    padding-bottom: 0;
+  }
+
+  .timeline:before{
+    left: 20px;
+  }
+
+  .timeline ul li:nth-child(odd),
+  .timeline ul li:nth-child(even){
+    width: 100%;
+    text-align: left;
+    padding-left: 50px; 
+    padding-bottom: 50px; 
+  }
+
+  .timeline ul li:nth-child(odd):before,
+  .timeline ul li:nth-child(even):before{
+    top: -18px; 
+    left: 16px;  
+  }
+
+  .timeline ul li:nth-child(odd) .time,
+  .timeline ul li:nth-child(even) .time{
+    top: -30px;
+    left: 50px;
+    right: inherit;
+  }
+}
+
+
+/* FIM ABA EXPERIÊNCIAS */
+
+
+
+/* ABA PROJETOS */
+  .projetos{
+     background-color: whitesmoke;
+     padding: 2em;
+     text-align: center; 
+     
+  }
+  
+  .contato h2,
+  .projetos h2 { /* Título Projetos Pessoais*/
+    margin-bottom: 25px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 48px;
+    margin-top: 1em;
+  }
+
+  .projetos .grid{
+    display: grid; /*possibilidade de grade*/
+    gap: 2em; /*espaçamento entre coluna-gap*/
+  }
+
+  @media (min-width: 800px){
+    .projetos .grid{
+      grid-template-columns: repeat(2, 400px);
+    }
+  }
+
+  @media (min-width: 1000px){
+    .projetos .grid{
+      grid-template-columns: repeat(3, 400px);
+      justify-content: center;
+    }
+  }
+
+  .projetos figure{
+    text-align: center;
+  }
+
+/*FIM ABA PROJETOS*/
+
+
+
+/* ABA CONTATO*/ 
+.contato{
+  background-color: #f8b00d;
+  padding: 2em;  
+  text-align: center; 
+}
+
+.contato a{
+  font-size: 56px;
+  color: black;
+}
+
+.contato a:active,
+.contato a:hover{
+  text-decoration: none; 
+  text-shadow: 0px 10px 30px whitesmoke;
+}
+
+.contato .grid{
+  display: grid; /*possibilidade de grade*/
+  gap: 2em; /*espaçamento entre coluna-gap*/
+}
+
+@media (min-width: 500px){
+  .contato .grid{
+    grid-template-columns: repeat(3, 120px);
+  }
+}
+
+@media (min-width: 630px){
+  .contato .grid{
+    grid-template-columns: repeat(3, 220px);
+  }
+}
+
+@media (min-width: 800px){
+  .contato .grid{
+    grid-template-columns: repeat(5, 100px);
+    justify-content: center;
+  }
+}
+
+/* FIM ABA CONTATO*/
+
